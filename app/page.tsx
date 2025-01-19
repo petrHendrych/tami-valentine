@@ -45,13 +45,17 @@ export default function Home() {
                 )}
 
                 {!isYesClicked && clickIndex ?
-                    (<Image src={sadCats[clickIndex - 1].src} alt="Sad cat"
-                            width={sadCats[clickIndex - 1].width}
-                            height={sadCats[clickIndex - 1].width}
-                            priority
-                            fetchPriority="high"
-                            className="rounded-2xl max-w-[400px] min-w-[300px]"/>
-                    ) : ( !isYesClicked && (
+                    (
+                        <>
+                            <Image src={sadCats[clickIndex - 1].src} alt="Sad cat"
+                                   width={sadCats[clickIndex - 1].width}
+                                   height={sadCats[clickIndex - 1].width}
+                                   priority
+                                   fetchPriority="high"
+                                   className="rounded-2xl max-w-[400px] min-w-[300px]"/>
+                            <audio src="/sad-violin.mp3" autoPlay loop/>
+                        </>
+                    ) : (!isYesClicked && (
                             <Image src="/cat_with_flower.jpg" alt="Cat With Flower"
                                    priority
                                    fetchPriority="high"
@@ -72,9 +76,12 @@ export default function Home() {
                                priority
                                fetchPriority="high"
                                className="rounded-2xl"/>
-                        <audio src="/audio.mp3" autoPlay loop />
+                        <audio src="/audio.mp3" autoPlay loop/>
                         <div className="drop-shadow-2xl text-xl xs:text-xl sm:text-3xl text-center leading-loose">
-                            😎💝 More information to come, stay tuned 💝😎
+                            More information to come, stay tuned
+                        </div>
+                        <div className="drop-shadow-2xl text-xl xs:text-xl sm:text-3xl text-center leading-loose">
+                            💝 Te amo mi amor 💝
                         </div>
                     </>
                 )}
