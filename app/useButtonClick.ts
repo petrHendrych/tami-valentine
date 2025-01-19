@@ -1,4 +1,4 @@
-import {RefObject, useMemo, useState} from "react";
+import {RefObject, useState} from "react";
 import cat1 from "@/public/sad-cats/sad-cat-1.jpg";
 import cat2 from "@/public/sad-cats/sad-cat-2.jpg";
 import cat3 from "@/public/sad-cats/sad-cat-3.jpg";
